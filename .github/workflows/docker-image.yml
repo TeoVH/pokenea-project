@@ -1,10 +1,9 @@
-# .github/workflows/docker-image.yml
 name: Build and push Docker image
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # permite disparar manualmente desde Actions UI
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -34,4 +33,4 @@ jobs:
           file: ./Dockerfile
 
       - name: Image digest
-        run: echo "Image pushed: ${{ secrets.DOCKERHUB_USERNAME }}/pokenea:latest"
+        run: echo "Image pushed successfully to DockerHub"
