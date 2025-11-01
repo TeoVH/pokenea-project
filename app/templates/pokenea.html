@@ -1,0 +1,26 @@
+<!-- templates/pokenea.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Pokenea - Show</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    .card { border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.1); padding: 1rem; text-align: center; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    .meta { margin-top: .75rem; color: #444; }
+    .frase { margin-top: 1rem; font-style: italic; color: #222; }
+    .small { font-size: .85rem; color: #666; margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>{{ pokenea.nombre }} (ID: {{ pokenea.id }})</h1>
+    <img src="{{ pokenea.imagen }}" alt="Imagen de {{ pokenea.nombre }}">
+    <div class="frase">“{{ pokenea.frase }}”</div>
+    <div class="meta">Altura: {{ pokenea.altura }} m — Habilidad: {{ pokenea.habilidad }}</div>
+    <div class="small">Contenedor: {{ contenedor_id }}</div>
+  </div>
+</body>
+</html>
